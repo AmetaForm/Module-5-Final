@@ -48,7 +48,7 @@
             form.petNames = new string[1];
         }
 
-        Console.WriteLine("Напишите количество ваших любимых цветов");
+        Console.Write("Напишите количество ваших любимых цветов ");
         int colorCount = CheckStringForInt(Console.ReadLine());
         form.favoriteColors = new string[colorCount];
         for (int i = 0; i < form.favoriteColors.Length; i++)
@@ -66,13 +66,13 @@
         Console.WriteLine($"Ваш возраст: {tuple.Item3} ");
         if (tuple.Item4 > 0)
         {
-            Console.WriteLine("Имена ваших питомцев");
+            Console.WriteLine("Имена ваших питомцев: ");
             for (int i = 0; i < tuple.Item5.Length; i++)
             {
                 Console.WriteLine(tuple.Item5[i]);
             }
         }
-        Console.WriteLine("Ваши любимые цвета");
+        Console.WriteLine("Ваши любимые цвета: ");
         for (int i = 0; i < tuple.Item6.Length; i++)
         {
             Console.WriteLine(tuple.Item6[i]);
@@ -88,7 +88,7 @@
 
         while (!input.All(char.IsLetter) | string.IsNullOrEmpty(input))
         {
-            Console.WriteLine("Введите строку содержащую только буквы:");
+            Console.Write("Введите строку содержащую только буквы: ");
             input = Console.ReadLine();
         }
         return input;
@@ -106,7 +106,7 @@
         }
         else
         {
-            Console.WriteLine("Пожалуйста, введите число: ");
+            Console.Write("Пожалуйста, введите число: ");
             string newInput = Console.ReadLine();
             return CheckStringForInt(newInput);
         }
@@ -128,14 +128,14 @@
             }
             else
             {
-                Console.WriteLine($"Введите число больше {value}: ");
+                Console.Write($"Введите число больше {value}: ");
                 string newInput = Console.ReadLine();
                 return CheckStringForInt(newInput);
             }
         }
         else
         {
-            Console.WriteLine("Введите число: ");
+            Console.Write("Пожалуйста, введите число: ");
             string newInput = Console.ReadLine();
             return CheckStringForInt(newInput);
         }
